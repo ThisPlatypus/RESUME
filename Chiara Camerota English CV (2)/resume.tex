@@ -1,0 +1,96 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+%\colorlet{awesome}{awesome-red}
+\definecolor{awesome}{HTML}{f94144}
+%% Colors for text
+\definecolor{darktext}{HTML}{f94145}
+\definecolor{text}{HTML}{577590} 
+\definecolor{graytext}{HTML}{fc6462} %%
+\definecolor{lighttext}{HTML}{414141} %%
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+\usepackage[math-style=ISO]{unicode-math} % Remove vargreek-shape if present
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\name{Chiara}{Camerota}
+\mobile{{(+39) 3913695400} }
+%%% Social
+\email{camerota.chiara.c@gmail.com}
+\linkedin{chiara-camerota}
+\github{ThisPlatypus}
+\homepage{{https://chiaracamerota.webflow.io/}}
+%%% Optionals
+\position{\textbf{Date of birth:} 14/11/1994{\enskip\cdotp\enskip}\textbf{Address:} 4171 Washington Ave, St. Louis, MO 63108, USA  }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Chiara Camerota~~~·~~~CV}
+  {\thepage}
+  
+  
+  \quote{``We demand rigidly defined areas of doubt and uncertainty!" \\ The Hitchhiker’s Guide to the Galaxy}
+
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
+
+%%% Import contents
+\import{\sectiondir}{skills.tex}
+
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{Pub.tex}
+\newpage
+\import{\sectiondir}{experience.tex}
+%\import{\sectiondir}{english.tex}
+
+
+
+%\import{\sectiondir}{committees.tex}
+%\import{\sectiondir}{extracurricular.tex}
+\end{document}
